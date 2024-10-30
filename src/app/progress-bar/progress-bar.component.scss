@@ -17,7 +17,7 @@
 .icon {
     width: 40px;
     height: 40px;
-    background-color: #d3d3d3; /* Grijze kleur voor inactieve stappen */
+    background-color: #d3d3d3;
     border-radius: 50%;
     line-height: 40px;
     font-weight: bold;
@@ -27,7 +27,7 @@
 }
 
 .step.active .icon {
-    background-color: #ffcc00; /* Gele kleur voor de actieve stap */
+    background-color: #ffcc00;
 }
 
 .step p {
@@ -42,6 +42,26 @@
     color: #999;
 }
 
-.step.active .icon {
-    background-color: #ffcc00; /* Zorg dat dit geel is voor de actieve stappen */
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .progress-bar {
+          display: none;
+     }
+
+    .step {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .icon {
+        margin-right: 15px;
+    }
+
+    /* Remove border for the last step */
+    .step:last-child {
+        border-bottom: none;
+    }
 }
