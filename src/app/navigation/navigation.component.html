@@ -1,0 +1,32 @@
+<header>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <span>Nikko Hoshinoyado</span>
+      </div>
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span class="hamburger"></span>
+      </div>
+      <ul class="menu" [class.active]="menuActive">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/meal">Meal</a></li>
+        <li><a routerLink="/rooms">Guest Rooms</a></li>
+        <li><a routerLink="/onsen">Onsen</a></li>
+        <li><a routerLink="/facilities">Facilities</a></li>
+        <li><a routerLink="/access">Access</a></li>
+        <li><a routerLink="/sightseeing">Sightseeing</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li class="language-toggle">
+          <button class="language-btn">JP</button>
+          <span class="divider">/</span>
+          <button class="language-btn active">EN</button>
+        </li>
+        <li>
+          <a routerLink="/reserve">
+            <button class="reservation-btn">Reserve</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,26 @@
+<app-progress-bar [currentStep]="currentStep"></app-progress-bar>
+<div class="confirmation-container">
+    <h1>Booking Confirmation</h1>
+    <p class="thank-you-message">Thank you for your booking! Please review your details below.</p>
+  
+    <!-- Guest Details Section -->
+    <div class="section-box guest-details">
+      <h2>Guest Details</h2>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>First Name:</strong> {{ firstName }}</p>
+      <p><strong>Last Name:</strong> {{ lastName }}</p>
+      <p><strong>Phone:</strong> {{ phone }}</p>
+    </div>
+  
+    <!-- Payment Details Section -->
+    <div class="section-box payment-details">
+      <h2>Payment Details</h2>
+      <p><strong>Card Number:</strong> **** **** **** {{ cardNumber.slice(-4) }}</p>
+      <p><strong>Expiry Date:</strong> {{ expiryDate }}</p>
+    </div>
+
+    <!-- Button Group -->
+    <div class="button-group">
+      <button class="btn-primary" (click)="goToHome()">Return to Home</button>
+    </div>
+</div>

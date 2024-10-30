@@ -1,0 +1,54 @@
+.rooms-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .room-card {
+      display: inline-block;
+      width: 300px;
+      margin: 15px;
+      padding: 10px;
+      border: 2px solid #e6e6e6;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+  
+      .room-image {
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+      h2 {
+        font-size: 1.8rem;
+        color: #e64a19; // Een mooie oranje tint
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #666;
+        margin: 10px 0;
+      }
+  
+      .reservation-btn {
+        padding: 10px 20px;
+        background-color: #ffb300; // Een mooie gele tint
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #ffa000; // Donkerder geel bij hover
+        }
+      }
+    }
+  }
+  

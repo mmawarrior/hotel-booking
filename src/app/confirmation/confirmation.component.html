@@ -1,0 +1,39 @@
+<app-progress-bar [currentStep]="currentStep"></app-progress-bar>
+<div class="confirmation">
+    <h1>Booking Confirmation</h1>
+    <p>Thank you for your booking! Please review your details below.</p>
+  
+    <!-- Room Details Section -->
+    <div class="section-box room-details">
+      <h2>Room Details</h2>
+      <p><strong>Room:</strong> {{ room?.name }}</p>
+      <p><strong>Description:</strong> {{ room?.description }}</p>
+    </div>
+  
+    <!-- Dates Section -->
+    <div class="section-box dates">
+      <h2>Dates</h2>
+      <p><strong>Check-in:</strong> {{ checkinDate | date: 'fullDate' }}</p>
+      <p><strong>Check-out:</strong> {{ checkoutDate | date: 'fullDate' }}</p>
+    </div>
+  
+    <!-- Pricing Section -->
+    <div class="section-box pricing">
+      <h2>Pricing</h2>
+      <p><strong>Total Price:</strong> {{ room?.price }} EUR</p>
+    </div>
+  
+    <!-- Extras Section -->
+    <div class="section-box extras">
+      <h2>Extras</h2>
+      <p>No extras selected.</p>
+    </div>
+  
+    <!-- Button Group -->
+    <div class="button-group">
+      <button class="btn-primary" (click)="confirmBooking()">Confirm and Pay</button>
+      <button class="btn-secondary" (click)="cancelBooking()">Cancel Booking</button>
+    </div>
+    
+  </div>
+  

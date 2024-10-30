@@ -1,0 +1,180 @@
+/* General styling */
+.reservation-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Noto Sans JP', sans-serif;  /* Japanese-inspired font */
+  color: #333;
+  margin-top: 50px;
+}
+
+/* Calendar Styling */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.calendar-day {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+  color: #333;
+}
+
+.calendar-day:hover {
+  background-color: #ffe4b3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.selected {
+  background-color: #ffcc00;
+  color: white;
+  border-color: #ff9900;
+}
+
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.calendar-navigation button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #007bff;
+}
+
+.calendar-navigation button:hover {
+  color: #ffcc00;
+}
+
+.calendar-month {
+  font-size: 1.3em;
+  color: #333;
+}
+
+ 
+/* Room cards styling */
+.room-card {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.room-image {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.room-details {
+  margin-left: 20px;
+  flex-grow: 1;
+  color: #333;
+}
+
+.room-details h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.room-details p {
+  margin: 5px 0;
+}
+
+.btn-primary {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ff9900;
+}
+
+.btn-secondary {
+  background-color: #e6e6e6;
+  padding: 10px 20px;
+  border: none;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #cccccc;
+}
+
+/* Typography */
+h1, h2, p {
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Additional reset button for the calendar */
+.reset-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #ff9900;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset-btn:hover {
+  background-color: #e68a00;
+}

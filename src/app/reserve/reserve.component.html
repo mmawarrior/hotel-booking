@@ -1,0 +1,50 @@
+<app-progress-bar [currentStep]="currentStep"></app-progress-bar> <!-- Progress bar at the top -->
+
+<div class="reservation-container">
+    <h1>Room Reservations</h1>
+    <p>Please select your check-in and check-out dates to see available rooms.</p>
+
+    <div *ngFor="let room of rooms" class="room-card">
+        <img [src]="room.image" alt="{{ room.name }}" class="room-image">
+        <div class="room-details">
+            <h2>{{ room.name }}</h2>
+            <p>{{ room.description }}</p>
+            <p><strong>Price for 2 adults for 1 night:</strong> {{ room.price }} EUR</p>
+            <p *ngIf="room.membershipPrice">
+                <strong>Membership Rate:</strong> {{ room.membershipPrice }} EUR (including tax)
+            </p>
+            <p *ngIf="room.regularPrice">
+                <strong>Regular Rate:</strong> {{ room.regularPrice }} EUR (including tax)
+            </p>
+            <button class="btn-primary" (click)="bookRoom(room)">Book Now</button>
+        </div>
+    </div>
+
+    <div *ngIf="selectedRoom" class="booking-section">
+        <div class="booking-details">
+            <h3>Booking: {{ selectedRoom.name }}</h3>
+            <p>{{ selectedRoom.description }}</p>
+        </div>
+
+        <div class="calendar-section">
+            <mat-form-field>
+                <input matInput [matDatepicker]="checkinPicker" [(ngModel)]="checkinDate" 
+                       [min]="minDate" [max]="maxDate" placeholder="Choose Check-in Date">
+                <mat-datepicker-toggle matSuffix [for]="checkinPicker"></mat-datepicker-toggle>
+                <mat-datepicker #checkinPicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="checkoutPicker" [(ngModel)]="checkoutDate" 
+                       [min]="checkinDate" [max]="maxDate" placeholder="Choose Check-out Date">
+                <mat-datepicker-toggle matSuffix [for]="checkoutPicker"></mat-datepicker-toggle>
+                <mat-datepicker #checkoutPicker></mat-datepicker>
+            </mat-form-field>
+
+            <div class="button-group">
+                <button class="btn-primary" (click)="confirmBooking()">Confirm Dates</button>
+                <button class="btn-secondary" (click)="cancelBooking()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

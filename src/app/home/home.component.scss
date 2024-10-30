@@ -1,0 +1,52 @@
+body {
+    background-color: #f5f5f5;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    max-width: 900px; /* Of de breedte die je wilt */
+    margin: 0 auto; /* Dit zorgt ervoor dat het in het midden van de pagina staat */
+    padding: 2rem;
+    display: flex; /* Voeg flex toe */
+    flex-direction: column; /* Zorg dat de inhoud onder elkaar staat */
+    align-items: center; /* Centreert de items horizontaal */
+    margin-top: 50px;
+}
+  
+  h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  button.reservation-btn {
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.reservation-btn:hover {
+    background-color: #e6b800;
+  }
+  
+  
+  button.reservation-btn:hover {
+    background-color: #e6b800;
+  }
+  
+  img {
+    width: 80%;
+    max-width: 600px; /* Zorg ervoor dat de afbeelding niet groter wordt dan dit */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem 0; /* Zorg voor wat ruimte boven en onder de afbeelding */
+}

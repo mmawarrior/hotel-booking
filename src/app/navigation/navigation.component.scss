@@ -1,0 +1,180 @@
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  color: black;
+  margin-right: 8px;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu li {
+  text-align: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffcc00;
+}
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.language-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.language-btn.active {
+  text-decoration: underline;
+  color: #333;
+}
+
+.reservation-btn {
+  background-color: #ffcc00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reservation-btn:hover {
+  background-color: #e6b800;
+}
+
+.menu-toggle {
+  display: none; /* Verborgen op desktop */
+}
+
+/* Mobiele weergave */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100vh;
+    flex-direction: column;
+    width: 250px;
+    background-color: white;
+    transition: 0.3s;
+    padding-top: 2rem;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .menu.active {
+    left: 0; /* Toon menu wanneer actief */
+  }
+
+  .menu-toggle {
+    display: block; /* Toon hamburgermenu op mobiele schermen */
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+/* iPad en vergelijkbare schermen (768px tot 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu {
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .menu li a {
+    font-size: 0.9rem; /* Iets kleinere lettergrootte voor links */
+  }
+
+  .logo {
+    font-size: 1.3rem; /* Kleinere logo */
+  }
+
+  .reservation-btn {
+    padding: 6px 14px; /* Kleinere padding voor betere weergave */
+    font-size: 0.85rem; /* Iets kleinere lettergrootte voor de knop */
+  }
+
+  .menu-toggle {
+    display: none; /* Verberg hamburgermenu op iPad en grotere apparaten */
+  }
+}
+
+/* Grotere tablets en laptops */
+@media (min-width: 1025px) {
+  .menu-toggle {
+    display: none; /* Verberg hamburgermenu op grotere schermen */
+  }
+}

@@ -1,0 +1,46 @@
+.access-section {
+    max-width: 1200px; /* Maximal width for the section */
+    margin: 0 auto; /* Center the section */
+    padding: 2rem; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+}
+
+.map-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Height for the map */
+    margin: 20px auto; /* Center the map */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.map-container iframe {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Match the container border radius */
+}
+
+.map-info {
+    margin-top: 10px; /* Space above the info */
+    font-family: 'Noto Sans JP', sans-serif; /* Match your font */
+    color: #333; /* Dark text color */
+}
+
+.map-info a {
+    display: inline-block; /* Block display for better click area */
+    margin-top: 10px; /* Space above the link */
+    padding: 10px 20px; /* Padding for the link */
+    background-color: #ffcc00; /* Button-like background */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.map-info a:hover {
+    background-color: #e6b800; /* Darken on hover */
+}

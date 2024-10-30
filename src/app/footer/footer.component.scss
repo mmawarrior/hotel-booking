@@ -1,0 +1,64 @@
+footer {
+    background-color: #eaeaea; /* Lichtgrijs, wat een modern gevoel geeft */
+    padding: 40px 20px; /* Ruimte rondom de footer */
+    text-align: center; /* Center de tekst */
+    border-top: 5px solid #ffcc00; /* Japanse stijl accent */
+    font-family: 'Noto Sans JP', sans-serif; /* Japans lettertype */
+  }
+  
+  .footer-container {
+    max-width: 1200px; /* Max breedte */
+    margin: 0 auto; /* Centraal */
+    padding: 20px; /* Binnenruimte */
+  }
+  
+  .footer-title {
+    font-size: 2rem; /* Grotere lettergrootte voor de titel */
+    color: #333; /* Donkere tekstkleur */
+    margin-bottom: 10px; /* Ruimte onder de titel */
+  }
+  
+  .footer-info p {
+    margin: 5px 0; /* Ruimte tussen de paragrafen */
+    color: #555; /* Iets lichter dan de hoofdtekst */
+  }
+  
+  .footer-menu {
+    display: flex; /* Flexbox voor menu-items */
+    justify-content: center; /* Center de menu-items */
+    flex-wrap: wrap; /* Wrap als nodig */
+    gap: 15px; /* Ruimte tussen de items */
+    margin: 20px 0; /* Ruimte boven en onder het menu */
+  }
+  
+  .footer-menu a {
+    text-decoration: none; /* Geen onderlijn */
+    color: #333; /* Donkere tekstkleur */
+    transition: color 0.3s; /* Vervaging voor hover effect */
+    font-weight: bold; /* Maak de links vetgedrukt */
+  }
+  
+  .footer-menu a:hover {
+    color: #ffcc00; /* Hoverkleur voor modern effect */
+  }
+  
+  .footer-social {
+    margin: 20px 0; /* Ruimte rondom sociale iconen */
+  }
+  
+  .footer-social img {
+    width: 30px; /* Breedte van iconen */
+    margin: 0 10px; /* Ruimte tussen iconen */
+    transition: transform 0.3s; /* Vervaging voor hover effect */
+  }
+  
+  .footer-social img:hover {
+    transform: scale(1.1); /* Vergroot het icoon bij hover */
+  }
+  
+  footer p {
+    font-size: 0.8rem; /* Kleinere lettergrootte voor copyright */
+    color: #666; /* Lichtere tekstkleur */
+    margin-top: 20px; /* Ruimte boven copyright */
+  }
+  

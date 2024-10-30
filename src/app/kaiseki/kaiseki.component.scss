@@ -1,0 +1,59 @@
+/* Algemene stijlen */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+.kaiseki-container {
+  text-align: center;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+ 
+
+.kaiseki-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.kaiseki-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #B19645;
+  color: white;
+  width: 160px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+}
+
+.kaiseki-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kaiseki-item h3 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #fff;
+  font-family: 'Noto Serif JP', serif; /* Voor Japanse stijl */
+}
+
+.kaiseki-item p {
+  font-size: 1em;
+  margin: 5px 0 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

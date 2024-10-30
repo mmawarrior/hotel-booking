@@ -1,0 +1,15 @@
+<div class="progress-bar">
+    <div class="step" [ngClass]="{ 'active': currentStep >= 1 }">
+      <div class="icon">1</div>
+      <p>Guest Details<br><span>Fill in your details</span></p>
+    </div>
+    <div class="step" [ngClass]="{ 'active': currentStep >= 2 }">
+      <div class="icon">2</div>
+      <p>Payment<br><span>Select payment type</span></p>
+    </div>
+    <div class="step" [ngClass]="{ 'active': currentStep >= 3 }">
+      <div class="icon">3</div>
+      <p>Complete Booking<br><span>Your room(s) is reserved</span></p>
+    </div>
+  </div>
+  

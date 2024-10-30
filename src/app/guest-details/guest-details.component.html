@@ -1,0 +1,39 @@
+<app-progress-bar [currentStep]="currentStep"></app-progress-bar>
+<div class="guest-details-container">
+  <h1>Guest Details</h1>
+  <form (ngSubmit)="submitGuestDetails()">
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+      <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" [(ngModel)]="phone" name="phone" required>
+      </div>
+
+      <h2>Payment Details</h2>
+      <div class="form-group">
+          <label for="cardNumber">Card Number:</label>
+          <input type="text" id="cardNumber" [(ngModel)]="cardNumber" name="cardNumber" required>
+      </div>
+      <div class="form-group">
+          <label for="expiryDate">Expiry Date:</label>
+          <input type="text" id="expiryDate" [(ngModel)]="expiryDate" name="expiryDate" required placeholder="MM/YY">
+      </div>
+      <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" [(ngModel)]="cvv" name="cvv" required>
+      </div>
+
+      <button type="button" class="btn-primary" (click)="confirmPayment()">Confirm and Pay</button>
+      <button type="button" class="btn-secondary" (click)="cancelBooking()">Cancel Booking</button>
+  </form>
+</div>
